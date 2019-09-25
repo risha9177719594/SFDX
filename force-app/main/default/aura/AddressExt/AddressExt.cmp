@@ -1,0 +1,10 @@
+<aura:component controller="AddressExtController">
+    <aura:attribute name="selectValue" type="List" default="[]"/>
+    <aura:handler name="init" value="{!this}"  action="{!c.doInit}"/>
+
+    <lightning:select>
+        <aura:iteration items="{!v.selectValue}" var="it">
+            <option value="{!it}">{!it}</option>
+        </aura:iteration>
+    </lightning:select>
+</aura:component>	
